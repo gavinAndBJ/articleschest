@@ -3,40 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./styles/style.css">
     <title>API Project</title>
 </head>
 <body>
     <div class="wrapper">
+        <!-- Header -->
+        <header>
+            <div class="header">
+                <h1>API Project</h1>
+                <form action="">
+                    <input type="text" id="search" placeholder="search">
+                    <button type="submit">Submit</button>
+                    <!-- Filters -->
+                </form>
+            </div>
+        </header>
+        <!-- Main -->
         <main>
-            <h1>API Project</h1>
-            <form action="">
-                <input type="text" id="search" placeholder="search">
-                <button type="submit">Submit</button>
-                <!-- Filters -->
-            </form>
             <article>
                 <div class="image">
-                    <img src="" alt="">
+                    <img src="./index.jfif" alt="">
                 </div>
-                <div class="heading"><h2>Test Heading</h2></div>
-                <div class="author">Test Author</div>
-                <div class="description">Test Description</div>
-                <div class="date"><em>April 14 2020</em></div>
-                <div class="wordcount">10</div>
+                <div class="details">
+                    <div class="heading">
+                        <h2>Test Heading</h2>
+                    </div>
+                    <div class="author">
+                        <p>Test Author</p>
+                    </div>
+                    <div class="description">
+                        <p>Test Description</p>
+                    </div>
+                    <div class="date">
+                        <em>April 14 2020</em>
+                    </div>
+                    <div class="wordcount">
+                        <p>10</p>
+                    </div>
+                </div>
             </article>
 
-            <!-- for later! Add weather somewhere -->
+            <article>
+                <div class="image">
+                    <img src="./index.jfif" alt="">
+                </div>
+                <div class="details">
+                    <div class="heading">
+                        <h2>Test Heading</h2>
+                    </div>
+                    <div class="author">
+                        <p>Test Author</p>
+                    </div>
+                    <div class="description">
+                        <p>Test Description</p>
+                    </div>
+                    <div class="date">
+                        <em>April 14 2020</em>
+                    </div>
+                    <div class="wordcount">
+                        <p>10</p>
+                    </div>
+                </div>
+            </article>
 
-            <footer>
-                <div>Copyright&copy;</div>
-                <p>Gavin & BJ</p>
-            </footer>
+            <!-- for later! Add weather somewhere -->            
         </main>
+
+        <!-- Footer -->
+        <footer>
+            <div>Copyright&copy;</div>
+            <p>Gavin & BJ</p>
+        </footer>
     </div>
     
 
-
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
