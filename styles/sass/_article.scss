@@ -2,9 +2,16 @@ article {
     margin-bottom: 1rem;
     border-bottom: 1px solid grey;
     display: flex;
+    flex-direction: column;
 
     & .details {
         padding: .5rem 1rem;
+    }
+
+    & .articleContainer {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 10px;
     }
 
 }
