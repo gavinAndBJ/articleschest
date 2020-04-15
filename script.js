@@ -28,8 +28,6 @@ articleApp.getArticles = (value) => {
         }
     }).then((res) => {
         articleApp.displayArticle(res);
-
-
     })
 }
 
@@ -44,12 +42,19 @@ articleApp.userInput = () => {
 
 }
 
+articleApp.formatDate = (date) => {
+    const parsedDate = new Date(parseInt(date.replace('/Date(', '')));
+    return finalDate = parsedDate.toLocaleDateString(); 
+}
+
 // Display results (Header / Description / Photo)
 articleApp.displayArticle = (response) => {
     let articleInfo = response.response.docs;
     // console.log(articleInfo)
     articleInfo.forEach((article)=>{
-        console.log(article)
+        console.log(`${ article.pub_date}`)
+        const date = articleApp.formatDate(`${article.pub_date}`)
+        console.log(date);
         const htmlToAppend = `
         <div class="wrapper">
             <div class="articleContainer">
@@ -59,7 +64,7 @@ articleApp.displayArticle = (response) => {
                 <div class="details">
                     <h2>${article.headline.main}</h2>
                     <p>${article.byline.original}</p>
-                    <p>${article.pub_date}</p>
+                    <p>${date}</p>
                     <p>${article.word_count}</p>
                     <p>${article.abstract}</p>
                 </div>
