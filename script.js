@@ -15,11 +15,8 @@ const $articleDescription = $('.description');
 const $articleDate = $('.date');
 const $articleWordCount = $('.wordCount');
 
-console.log($searchInput)
-
 // Connect to API using AJAX
 articleApp.getArticles = (value) => {
-    console.log(value);
     $.ajax({
         url: articleApp.apiUrl,
         method: `GET`,
@@ -30,10 +27,6 @@ articleApp.getArticles = (value) => {
             "api-key": articleApp.apiKey,
         }
     }).then((res) => {
-        console.log(res);
-        // for(let i = 0; i<=2; i++ ){
-            
-        // }
         articleApp.displayArticle(res);
 
 
@@ -46,8 +39,6 @@ articleApp.userInput = () => {
         event.preventDefault();
         // Create a variable to accept user input from search bar
         const value = $searchInput.val();
-        console.log(value);
-
         articleApp.getArticles(value);
     });
 
@@ -55,11 +46,29 @@ articleApp.userInput = () => {
 
 // Display results (Header / Description / Photo)
 articleApp.displayArticle = (response) => {
-    $articleHeading.text(`${response.response.docs[0].headline.main}`);
-    $articleAuthor.text(`${response.response.docs[0].byline.original}`)
-    $articleDate.text(`${response.response.docs[0].pub_date}`)
-    $articleWordCount.text(`${response.response.docs[0].word_count}`)
-    $articleDescription.text(`${response.response.docs[0].abstract}`)
+    let articleInfo = response.response.docs;
+    // console.log(articleInfo)
+    articleInfo.forEach((article)=>{
+        console.log(article)
+        const htmlToAppend = `
+        <div class="wrapper">
+            <div class="articleContainer">
+                <div class="image">
+                    <img src="https://www.nytimes.com/${article.multimedia[19].url}" alt="">
+                </div>
+                <div class="details">
+                    <h2>${article.headline.main}</h2>
+                    <p>${article.byline.original}</p>
+                    <p>${article.pub_date}</p>
+                    <p>${article.word_count}</p>
+                    <p>${article.abstract}</p>
+                </div>
+            </div>
+        </div>
+        `;
+
+        $(`.articlePost`).append(htmlToAppend)
+    });  
 }
 
 
