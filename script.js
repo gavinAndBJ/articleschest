@@ -43,7 +43,8 @@ articleApp.userInput = () => {
 }
 
 articleApp.formatDate = (date) => {
-    const parsedDate = new Date(parseInt(date.replace('/Date(', '')));
+    const parsedDate = new Date(date);
+    console.log(parsedDate);
     return finalDate = parsedDate.toLocaleDateString(); 
 }
 
@@ -53,7 +54,7 @@ articleApp.displayArticle = (response) => {
     // console.log(articleInfo)
     articleInfo.forEach((article)=>{
         console.log(`${ article.pub_date}`)
-        const date = articleApp.formatDate(`${article.pub_date}`)
+        let date = articleApp.formatDate(`${article.pub_date}`)
         console.log(date);
         const htmlToAppend = `
         <div class="wrapper">
