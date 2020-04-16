@@ -13,7 +13,57 @@
             <div class="header">
                 <h1>API Project</h1>
                 <form id="target" action="">
-                    <input type="text" id="search" placeholder="search">
+                    <input type="text" id="search" class="search" placeholder="search">
+                    <div>
+                        <!-- <label for="filter">Filter by:</label> -->
+                        <select id="filter">
+                            <option value="none">Select Filter</option>
+                            <option value="adventure sports">Adventure Sports</option>
+                            <option value="arts & leisure">Arts & Leisure</option>
+                            <option value="arts">Arts</option>
+                            <option value="automobiles">Automobiles</option>
+                            <option value="blogs">Blogs</option>
+                            <option value="books">Books</option>
+                            <option value="booming">Booming</option>
+                            <option value="Business Day">business day</option>
+                            <option value="business">Business</option>
+                            <option value="cars">Cars</option>
+                            <option value="classifieds">Classifieds</option>
+                            <option value="culture">Culture</option>
+                            <option value="dining">Dining</option>
+                            <option value="editorial">Editorial</option>
+                            <option value="education">Education</option>
+                            <option value="environment">Environment</option>
+                            <option value="Fashion & Style">fashion & style</option>
+                            <option value="financial">Financial</option>
+                            <option value="">food</option>
+                            <option value="foreign">Foreign</option>
+                            <option value="Health & Fitness">health & fitness</option>
+                            <option value="Home & Garden">home & garden</option>
+                            <option value="jobs">Jobs</option>
+                            <option value="letters">Letters</option>
+                            <option value="media">Media</option>
+                            <option value="movies">Movies</option>
+                            <option value="national">National</option>
+                            <option value="obituaries">Obituaries</option>
+                            <option value="opEd">OpEd</option>
+                            <option value="opinion">Opinion</option>
+                            <option value="politics">Politics</option>
+                            <option value="science">Science</option>
+                            <option value="society">Society</option>
+                            <option value="sports">Sports</option>
+                            <option value="style">Style</option>
+                            <option value="technology">Technology</option>
+                            <option value="teens">Teens</option>
+                            <option value="television">Television</option>
+                            <option value="theater">Theater</option>
+                            <option value="travel">Travel</option>
+                            <option value="wealth">Wealth</option>
+                            <option value="weather">Weather</option>
+                            <option value="world">World</option>
+
+                        </select>
+                    </div>
                     <input type="submit" value="Go">
                     <!-- <button type="submit">Submit</button> -->
                     <!-- Filters -->
@@ -22,11 +72,11 @@
         </header>
         <!-- Main -->
         <main>
-            <article class="articlePost">
-
-            </article>
-
-            <!-- for later! Add weather somewhere -->            
+            <div class="wrapper">
+                <div class="searchQuery"></div>
+                <article class="articlePost"></article>
+            </div>
+            <!-- for later! Add weather somewhere -->
         </main>
 
         <!-- Footer -->
