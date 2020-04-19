@@ -66,10 +66,7 @@ articleApp.displayArticle = (response) => {
     let articleInfo = response.response.docs;
     // console.log(articleInfo)
     articleInfo.forEach((article)=>{
-<<<<<<< HEAD
-        const date = articleApp.formatDate(`${article.pub_date}`)
-        console.log(article)
-        console.log(article.word_count)
+
         
         if (article.multimedia.length > 0) {
             articleApp.image = `https://www.nytimes.com/${article.multimedia[0].url}`
@@ -89,12 +86,8 @@ articleApp.displayArticle = (response) => {
             articleApp.WordCount = `Not Listed`
         }
 
-
-=======
-        console.log(`${ article.pub_date}`)
         let date = articleApp.formatDate(`${article.pub_date}`)
-        console.log(date);
->>>>>>> master
+
         const htmlToAppend = `
             <div class="articleContainer">
                 <div class="image">
