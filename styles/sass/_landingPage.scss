@@ -20,10 +20,19 @@ header {
         display: flex;
         flex-direction: column;
     }
+
+}
+
+.filter {
+        width: 230px;
+    }
+
+.grey {
+    color: $grey;
 }
 
 footer {
-    background: grey;
-    color: #fff;
+    background: $grey;
+    color: $white;
     text-align: center;
 }
