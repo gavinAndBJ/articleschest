@@ -56,7 +56,8 @@ articleApp.userInput = () => {
 }
 
 articleApp.formatDate = (date) => {
-    const parsedDate = new Date(parseInt(date.replace('/Date(', '')));
+    const parsedDate = new Date(date);
+    console.log(parsedDate);
     return finalDate = parsedDate.toLocaleDateString(); 
 }
 
@@ -65,6 +66,7 @@ articleApp.displayArticle = (response) => {
     let articleInfo = response.response.docs;
     // console.log(articleInfo)
     articleInfo.forEach((article)=>{
+<<<<<<< HEAD
         const date = articleApp.formatDate(`${article.pub_date}`)
         console.log(article)
         console.log(article.word_count)
@@ -88,6 +90,11 @@ articleApp.displayArticle = (response) => {
         }
 
 
+=======
+        console.log(`${ article.pub_date}`)
+        let date = articleApp.formatDate(`${article.pub_date}`)
+        console.log(date);
+>>>>>>> master
         const htmlToAppend = `
             <div class="articleContainer">
                 <div class="image">
