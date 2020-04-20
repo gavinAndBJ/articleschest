@@ -63,15 +63,17 @@ articleApp.userInput = () => {
     $searchForm.submit((event) => {
         
         $(`.articlePost`).empty();
-        // alert("Handler for .submit() called.");
         event.preventDefault();
         // Create a variable to accept user input from search bar
         const value = $searchInput.val();
         const filter = $(`option:selected`).val();
-        console.log(filter)
         articleApp.getArticles(value, filter);
         $(`.searchQuery`).html(`<h2>Your search for "${value}"...</h2>`);
         $searchInput.val(``);
+        
+        setTimeout(function () {
+            $(`header`).removeClass(`closedHeader`);
+        }, 1000);
     });
 
 }
@@ -117,9 +119,9 @@ articleApp.displayArticle = (response) => {
                 <div class="details">
                     <a href="${article.web_url}"><h3>${article.headline.main}</h3></a>
                     <div class="grey">
-                    <p>${articleApp.author}</p>
-                    <p>Date Published: ${date}</p>
-                    <p>Word Count: ${articleApp.WordCount}</p>
+                        <p>${articleApp.author}</p>
+                        <p>Date Published: ${date}</p>
+                        <p>Word Count: ${articleApp.WordCount}</p>
                     </div>
                     <p class="abstract">${article.abstract}</p>
                     <p><a class="readMore" href="${article.web_url}">Read More</a></p>

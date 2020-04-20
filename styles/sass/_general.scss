@@ -1,7 +1,16 @@
-$white: #FFFFFF;
-$black: #000000;
-$grey: #767676;
-$color-primary: rgb(115, 247, 240);
+$white: #FFF7FA;
+$black: #0A0606;
+$grey: #3A3E3B;
+// $color-primary: #0A2463;
+// $color-secondary: #3E92CC;
+
+
+$color-secondary:#FE4A49;
+
+
+* {
+    transition: all 1s ease;
+}
 
 body {
     font-size: 125%;

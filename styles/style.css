@@ -248,6 +248,11 @@ textarea {
   overflow: hidden;
 }
 
+* {
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
 body {
   font-size: 125%;
 }
@@ -269,8 +274,11 @@ a {
   margin: 0 auto;
 }
 
+.closedHeader {
+  height: 90vh;
+}
+
 header {
-  height: 40vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -278,7 +286,9 @@ header {
       -ms-flex-pack: center;
           justify-content: center;
   margin-top: 2rem 0;
-  background: #73f7f0;
+  background: #FE4A49;
+  height: 40vh;
+  color: #FFF7FA;
 }
 
 header .header {
@@ -311,33 +321,17 @@ header form {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-}
-
-form {
   width: 50%;
 }
 
-input, select {
+header input, header select {
   width: 100%;
-  height: 2rem;
-  border-color: grey;
+  height: 3rem;
+  border-color: #3A3E3B;
   border-radius: .25rem;
   margin-bottom: .5rem;
   text-align: center;
-}
-
-.grey {
-  color: #767676;
-}
-
-@media (max-width: 760px) {
-  form {
-    width: 90%;
-  }
-  input, select {
-    width: 100%;
-    height: 2rem;
-  }
+  background-color: #FFF7FA;
 }
 
 .weather {
@@ -359,13 +353,13 @@ input, select {
 }
 
 footer {
-  background: #73f7f0;
-  color: #000000;
+  background: #FE4A49;
+  color: #FFF7FA;
   text-align: center;
   padding: .5rem;
   width: 100%;
-  position: -webkit-sticky;
-  position: sticky;
+  height: 10vh;
+  position: fixed;
   bottom: 0;
 }
 
@@ -373,8 +367,18 @@ footer p {
   font-size: 1.3rem;
 }
 
+@media (max-width: 760px) {
+  header
+form {
+    width: 90%;
+  }
+  input, select {
+    width: 100%;
+    height: 2rem;
+  }
+}
+
 article {
-  margin-bottom: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -408,7 +412,7 @@ article .articleContainer {
           flex-direction: row;
   margin: 5px;
   padding-bottom: 10px;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #0A0606;
 }
 
 article .image {
@@ -450,7 +454,7 @@ h2 {
 .readMore {
   font-size: 1.1rem;
   text-transform: uppercase;
-  border: 1px solid #000000;
+  border: 1px solid #0A0606;
   padding: 10px 15px;
   margin-top: 10px;
   display: inline-block;
@@ -459,10 +463,8 @@ h2 {
 }
 
 .readMore:hover {
-  color: #767676;
-  border: 1px solid #767676;
-  -webkit-box-shadow: 2px 3px 3px 1px rgba(0, 0, 0, 0.51);
-          box-shadow: 2px 3px 3px 1px rgba(0, 0, 0, 0.51);
+  color: #FE4A49;
+  border: 1px solid #FE4A49;
 }
 
 .hoverEffect {
@@ -495,4 +497,8 @@ h2 {
 
 .articleContainer .details {
   min-width: 400px;
+}
+
+.articleContainer .grey {
+  color: #3A3E3B;
 }
