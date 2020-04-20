@@ -14,6 +14,11 @@ header {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
+         & h1 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
     }
 
     & form {
@@ -29,6 +34,10 @@ header {
 
 .grey {
     color: $grey;
+}
+
+.weatherImage {
+        width: 5rem;
 }
 
 footer {

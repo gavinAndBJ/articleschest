@@ -289,6 +289,11 @@ header .header {
           align-items: center;
 }
 
+header .header h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
 header form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -305,6 +310,10 @@ header form {
 
 .grey {
   color: #767676;
+}
+  
+.weatherImage {
+  width: 5rem;
 }
 
 footer {
