@@ -3,8 +3,12 @@ const articleApp = {};
 
 // Create namespace variable  for API url and API key
 articleApp.apiKey = `uXiSZXYADR9VvLuUkUqDWxnFIzAtZpy6`;
-
 articleApp.apiUrl = 'https://api.nytimes.com/svc/search/v2/articlesearch.json?';
+
+// articleApp.weatherApiKey = 'dfJjybJeDcPT23mZu3FWpoLdZcdQh0td';
+const proxy = 'https://cors-anywhere.herokuapp.com/';
+// articleApp.weatherApiUrl = `${proxy}https://www.metaweather.com/api/location/search/?query=london`;
+articleApp.weatherApiUrl = `${proxy}https://api.darksky.net/forecast/93463444821e6e23f93583478eef6301/43.651070,-79.347015`;
 
 
 const $searchInput = $('#search');
@@ -14,6 +18,23 @@ const $articleAuthor = $('.author');
 const $articleDescription = $('.description');
 const $articleDate = $('.date');
 const $articleWordCount = $('.wordCount');
+
+const $temperatureDescription = $('.temperature-description');
+const $temperatureDegree = $('.temperature-degree');
+
+// Connect to Weather API using AJAX
+articleApp.getWeather = () => {
+    $.ajax({
+        url: articleApp.weatherApiUrl,
+        method: `GET`,
+        dataType: `json`
+    }).then((res) => {
+        console.log(res);
+        const { temperature, summary } = res.currently;
+        console.log(temperature, summary);
+        articleApp.displayWeather(res);
+    })
+}
 
 // Connect to API using AJAX
 articleApp.getArticles = (value, filter) => {
@@ -108,10 +129,17 @@ articleApp.displayArticle = (response) => {
     });  
 }
 
+// Display results (weather)
+articleApp.displayWeather = (response) => {
+    const { temperature, summary } = response.currently;
+    $temperatureDescription.text(`${summary}`);
+    $temperatureDegree.text(`${temperature}`);
+}
+
 
 // Create init
 articleApp.init = () => {
-    // articleApp.getArticles();
+    articleApp.getWeather();
     articleApp.userInput();
 }
 
