@@ -5,7 +5,7 @@ article {
     flex-direction: column;
 
     & .details {
-        padding: .5rem 1rem;
+        padding: 0 1rem .5rem 1rem;
         display: flex;
         flex-direction: column;
         flex: 3;
@@ -17,12 +17,11 @@ article {
         margin: 5px;
         padding-bottom: 10px;
         border-bottom: 1px solid black;
-        
     }
 
     & .image {
-        width: 150px;
-        height: 150px;
+        width: 200px;
+        height: 200px;
         display: flex;
         flex: 1;
     }
@@ -35,7 +34,8 @@ article {
     }
 
     & h3 {
-        font-size: 2rem;
+        font-size: 1.7rem;
+        margin-bottom: 10px;
     }
 
     & .date {
@@ -48,5 +48,34 @@ h2 {
         font-size: 3rem;
     }
 
+.abstract {
+    margin-top: 10px;
+}
+
+.readMore {
+    font-size:1.1rem;
+    text-transform: uppercase;
+    border: 1px solid $black;
+    padding: 10px 15px;
+    margin-top: 10px;
+    display: inline-block;
+    transition: all .3s ease; 
+}
+
+.readMore:hover{
+        color: $grey;
+        border: 1px solid $grey;
+        box-shadow: 2px 3px 3px 1px rgba(0,0,0,0.51);
+    }
+
+.hoverEffect{ 
+transition: all .3s ease; 
+}
+
+.hoverEffect:hover { 
+transform: scale(1.1); 
+box-shadow: 4px 10px 12px 1px rgba(0,0,0,0.51);
+margin: 20px;
+}
 
 

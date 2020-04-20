@@ -1,3 +1,12 @@
+body {
+  font-size: 125%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
   margin: 0;
   padding: 0;
@@ -295,13 +304,21 @@ header form {
           flex-direction: column;
 }
 
+.filter {
+  width: 230px;
+}
+
+.grey {
+  color: #767676;
+}
+  
 .weatherImage {
   width: 5rem;
 }
 
 footer {
-  background: grey;
-  color: #fff;
+  background: #767676;
+  color: #FFFFFF;
   text-align: center;
 }
 
@@ -318,7 +335,7 @@ article {
 }
 
 article .details {
-  padding: .5rem 1rem;
+  padding: 0 1rem .5rem 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -345,8 +362,8 @@ article .articleContainer {
 }
 
 article .image {
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -364,7 +381,8 @@ article img {
 }
 
 article h3 {
-  font-size: 2rem;
+  font-size: 1.7rem;
+  margin-bottom: 10px;
 }
 
 article .date {
@@ -373,4 +391,39 @@ article .date {
 
 h2 {
   font-size: 3rem;
+}
+
+.abstract {
+  margin-top: 10px;
+}
+
+.readMore {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  border: 1px solid #000000;
+  padding: 10px 15px;
+  margin-top: 10px;
+  display: inline-block;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.readMore:hover {
+  color: #767676;
+  border: 1px solid #767676;
+  -webkit-box-shadow: 2px 3px 3px 1px rgba(0, 0, 0, 0.51);
+          box-shadow: 2px 3px 3px 1px rgba(0, 0, 0, 0.51);
+}
+
+.hoverEffect {
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.hoverEffect:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-box-shadow: 4px 10px 12px 1px rgba(0, 0, 0, 0.51);
+          box-shadow: 4px 10px 12px 1px rgba(0, 0, 0, 0.51);
+  margin: 20px;
 }

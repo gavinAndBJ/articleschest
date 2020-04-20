@@ -110,17 +110,19 @@ articleApp.displayArticle = (response) => {
         let date = articleApp.formatDate(`${article.pub_date}`)
 
         const htmlToAppend = `
-            <div class="articleContainer">
+            <div class="articleContainer hoverEffect">
                 <div class="image">
-                    <img src="${articleApp.image}" alt="">
+                    <a href="${article.web_url}"><img src="${articleApp.image}" alt=""></a>
                 </div>
                 <div class="details">
-                    <h3>${article.headline.main}</h3>
+                    <a href="${article.web_url}"><h3>${article.headline.main}</h3></a>
+                    <div class="grey">
                     <p>${articleApp.author}</p>
-                    <p><strong>Date Published:</strong> ${date}</p>
-                    <p><strong>Word Count:</strong> ${articleApp.WordCount}</p>
-                    <p>${article.abstract}</p>
-                    <p><a href="${article.web_url}">Read More</a></p>
+                    <p>Date Published: ${date}</p>
+                    <p>Word Count: ${articleApp.WordCount}</p>
+                    </div>
+                    <p class="abstract">${article.abstract}</p>
+                    <p><a class="readMore" href="${article.web_url}">Read More</a></p>
                 </div>
             </div>
         `;
