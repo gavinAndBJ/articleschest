@@ -280,6 +280,11 @@ header .header {
           align-items: center;
 }
 
+header .header h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
 header form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -288,6 +293,10 @@ header form {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.weatherImage {
+  width: 5rem;
 }
 
 footer {
