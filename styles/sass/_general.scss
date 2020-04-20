@@ -1,13 +1,19 @@
 $white: #FFFFFF;
 $black: #000000;
 $grey: #767676;
+$color-primary: rgb(115, 247, 240);
 
 body {
     font-size: 125%;
 }
 
-
 a {
     text-decoration: none;
     color: inherit;
+}
+
+@media (max-width: 760px){
+    body {
+        font-size: 100%;
+    }
 }
