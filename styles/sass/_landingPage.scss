@@ -12,7 +12,7 @@ header {
     display: flex;
     justify-content: center;
     margin-top: 2rem 0;
-    background: $black;
+    background: $color-primary;
     height: 40vh;
     color: $white;
 
@@ -24,8 +24,23 @@ header {
         position: relative;
 
         & h1 {
-            font-size: 2rem;
-            margin-bottom: 2rem;
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 3rem;
+            color: rgb(245, 186, 39);
+            display: inline-block;
+            padding-bottom: 8px;
+            position: relative;
+        }
+
+        & h1:before{
+            content: "";
+            position: absolute;
+            width: 70%;
+            height: 1px;
+            bottom: 0;
+            left: 30%;
+            border-bottom: 5px solid $color-secondary-blue;
         }
     }
 
@@ -51,14 +66,14 @@ header {
 // Weather Section
 .weather {
     position: absolute;
-    top: 0;
+    top: 1rem;
     right: 0;
 
     & h3 {
-        font-size: 2rem;
+        font-size: 1.75rem;
     }
     & p {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
     }
 }
 
@@ -69,26 +84,25 @@ header {
 
 // Footer
 footer {
-    background: $black;
-    color: $white;
+    background: $color-primary;
+    color: $color-secondary-yellow;
     text-align: center;
     padding: 1rem;
     width: 100%;
     height: 10vh;
     position: fixed;
     bottom: 0;
-
+    border-top: 2px solid $color-secondary-blue;
 
     & p {
         font-size: 1.3rem;
     }
 }
 
-
-
+// Media Queries
 @media (max-width: 760px){
     header {
-    height: 300px;
+    height: 400px;
         & form {
             width: 90%;
         }
@@ -96,20 +110,28 @@ footer {
             width: 100%;
             height: 2rem;
         }
+
+        & .header {
+            & h1 {
+                font-size: 3.1rem;
+            }
+        }
     }
+    
     .weather {
         text-align: center;
         position: relative;
+
         & h3 {
-            font-size: 1rem;
+            font-size: 1.3rem;
         }
         & p {
-            font-size: 0.9rem;
+            font-size: 1rem;
         }
     }
 
     .weatherImage {
-        width: 3rem;
+        width: 3.5rem;
     }
 
     footer {

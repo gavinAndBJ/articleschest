@@ -9,7 +9,7 @@ article {
     flex-wrap: wrap;
     margin: 5px;
     padding-bottom: 10px;
-    border-bottom: 1px solid $black;
+    border-bottom: 1px solid $color-primary;
     // Text section of the acticles
     & .details {
         padding: 0 1rem .5rem 1rem;
@@ -22,7 +22,7 @@ article {
         & .readMore {
             font-size:1.1rem;
             text-transform: uppercase;
-            border: 1px solid $black;
+            border: 1px solid $color-primary;
             padding: 10px 15px;
             margin-top: 10px;
             display: inline-block;
@@ -78,6 +78,7 @@ margin: 20px 0;
 }
 
 
+// Media Queries
 @media (max-width: 822px) {
     .articleContainer {
         & .details {

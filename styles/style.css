@@ -286,7 +286,7 @@ header {
       -ms-flex-pack: center;
           justify-content: center;
   margin-top: 2rem 0;
-  background: #0A0606;
+  background: #3a3a3a;
   height: 40vh;
   color: #FFF7FA;
 }
@@ -309,8 +309,23 @@ header .header {
 }
 
 header .header h1 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
+  font-size: 4rem;
+  font-weight: 800;
+  margin-bottom: 3rem;
+  color: #f5ba27;
+  display: inline-block;
+  padding-bottom: 8px;
+  position: relative;
+}
+
+header .header h1:before {
+  content: "";
+  position: absolute;
+  width: 70%;
+  height: 1px;
+  bottom: 0;
+  left: 30%;
+  border-bottom: 5px solid #0aa4ca;
 }
 
 header form {
@@ -336,16 +351,16 @@ header input, header select {
 
 .weather {
   position: absolute;
-  top: 0;
+  top: 1rem;
   right: 0;
 }
 
 .weather h3 {
-  font-size: 2rem;
+  font-size: 1.75rem;
 }
 
 .weather p {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
 
 .weatherImage {
@@ -353,14 +368,15 @@ header input, header select {
 }
 
 footer {
-  background: #0A0606;
-  color: #FFF7FA;
+  background: #3a3a3a;
+  color: #f5ba27;
   text-align: center;
   padding: 1rem;
   width: 100%;
   height: 10vh;
   position: fixed;
   bottom: 0;
+  border-top: 2px solid #0aa4ca;
 }
 
 footer p {
@@ -369,7 +385,7 @@ footer p {
 
 @media (max-width: 760px) {
   header {
-    height: 300px;
+    height: 400px;
   }
   header form {
     width: 90%;
@@ -378,18 +394,21 @@ footer p {
     width: 100%;
     height: 2rem;
   }
+  header .header h1 {
+    font-size: 3.1rem;
+  }
   .weather {
     text-align: center;
     position: relative;
   }
   .weather h3 {
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
   .weather p {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
   .weatherImage {
-    width: 3rem;
+    width: 3.5rem;
   }
   footer p {
     font-size: 1rem;
@@ -418,7 +437,7 @@ article {
       flex-wrap: wrap;
   margin: 5px;
   padding-bottom: 10px;
-  border-bottom: 1px solid #0A0606;
+  border-bottom: 1px solid #3a3a3a;
 }
 
 .articleContainer .details {
@@ -442,7 +461,7 @@ article {
 .articleContainer .details .readMore {
   font-size: 1.1rem;
   text-transform: uppercase;
-  border: 1px solid #0A0606;
+  border: 1px solid #3a3a3a;
   padding: 10px 15px;
   margin-top: 10px;
   display: inline-block;
@@ -451,8 +470,8 @@ article {
 }
 
 .articleContainer .details .readMore:hover {
-  color: #FE4A49;
-  border: 1px solid #FE4A49;
+  color: #3a3a3a;
+  border: 1px solid #3a3a3a;
 }
 
 .articleContainer .details .grey {
