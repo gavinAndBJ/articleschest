@@ -5,12 +5,10 @@ const articleApp = {};
 articleApp.apiKey = `uXiSZXYADR9VvLuUkUqDWxnFIzAtZpy6`;
 articleApp.apiUrl = 'https://api.nytimes.com/svc/search/v2/articlesearch.json?';
 
-// articleApp.weatherApiKey = 'dfJjybJeDcPT23mZu3FWpoLdZcdQh0td';
 const proxy = 'https://cors-anywhere.herokuapp.com/';
-// articleApp.weatherApiUrl = `${proxy}https://www.metaweather.com/api/location/search/?query=london`;
 articleApp.weatherApiUrl = `${proxy}https://api.darksky.net/forecast/93463444821e6e23f93583478eef6301/43.651070,-79.347015`;
 
-
+// Cache the selectors for multiple uses
 const $searchInput = $('#search');
 const $searchForm = $('#target');
 const $articleHeading = $('.heading');
@@ -34,7 +32,7 @@ articleApp.getWeather = () => {
     })
 }
 
-// Connect to API using AJAX
+// Connect to articles API using AJAX
 articleApp.getArticles = (value, filter) => {
     if (filter != `none` ) {
         articleApp.filter = `news_desk:${filter}`;
@@ -57,9 +55,9 @@ articleApp.getArticles = (value, filter) => {
     })
 }
 
+// Get user input
 articleApp.userInput = () => {
-    $searchForm.submit((event) => {
-        
+    $searchForm.submit((event) => {        
         $(`.articlePost`).empty();
         event.preventDefault();
         // Create a variable to accept user input from search bar
@@ -73,9 +71,9 @@ articleApp.userInput = () => {
             $(`header`).removeClass(`closedHeader`);
         }, 1000);
     });
-
 }
 
+// Format date
 articleApp.formatDate = (date) => {
     const parsedDate = new Date(date);
     return finalDate = parsedDate.toLocaleDateString(); 
@@ -84,9 +82,8 @@ articleApp.formatDate = (date) => {
 // Display results (Header / Description / Photo)
 articleApp.displayArticle = (response) => {
     let articleInfo = response.response.docs;
-    articleInfo.forEach((article)=>{
 
-        
+    articleInfo.forEach((article)=>{        
         if (article.multimedia.length > 0) {
             articleApp.image = `https://www.nytimes.com/${article.multimedia[0].url}`
         } else { 
@@ -135,7 +132,6 @@ articleApp.displayWeather = (response) => {
     $temperatureDescription.text(`${summary}`);
     $temperatureDegree.text(`${temperature}`);
 }
-
 
 // Create init
 articleApp.init = () => {
