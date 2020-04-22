@@ -325,7 +325,7 @@ header .header h1:before {
   height: 1px;
   bottom: 0;
   left: 30%;
-  border-bottom: 5px solid #0aa4ca;
+  border-bottom: 5px solid #05bfee;
 }
 
 header form {
@@ -369,14 +369,14 @@ header input, header select {
 
 footer {
   background: #3a3a3a;
-  color: #f5ba27;
+  color: #ffc42d;
   text-align: center;
   padding: 1rem;
   width: 100%;
   height: 10vh;
   position: fixed;
   bottom: 0;
-  border-top: 2px solid #0aa4ca;
+  border-top: 2px solid #05bfee;
 }
 
 footer p {
@@ -470,8 +470,8 @@ article {
 }
 
 .articleContainer .details .readMore:hover {
-  color: #0aa4ca;
-  border: 1px solid #0aa4ca;
+  color: #05bfee;
+  border: 1px solid #05bfee;
 }
 
 .articleContainer .details .grey {

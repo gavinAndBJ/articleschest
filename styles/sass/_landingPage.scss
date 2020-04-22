@@ -8,6 +8,7 @@
     height: 90vh;
 }
 
+// Header
 header {
     display: flex;
     justify-content: center;
@@ -98,7 +99,7 @@ footer {
         font-size: 1.3rem;
     }
 }
-
+//----------------------------------------------------------------------
 // Media Queries
 @media (max-width: 760px){
     header {

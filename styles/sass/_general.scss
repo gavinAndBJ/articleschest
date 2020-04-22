@@ -2,10 +2,10 @@
 $white: #FFF7FA;
 $grey:  #5b5555;
 $color-primary: rgb(58, 58, 58);
-$color-secondary-yellow:rgb(245, 186, 39);
-$color-secondary-blue:rgb(10, 164, 202);
+$color-secondary-yellow:rgb(255, 196, 45);
+$color-secondary-blue:rgb(5, 191, 238);
 
-
+// General App styles
 * {
     transition: all 1s ease;
 }
@@ -19,7 +19,7 @@ a {
     color: inherit;
 }
 
-
+//------------------------------------------------------
 // Media queries
 @media (max-width: 760px){
     body {
