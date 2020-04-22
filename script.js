@@ -29,9 +29,7 @@ articleApp.getWeather = () => {
         method: `GET`,
         dataType: `json`
     }).then((res) => {
-        console.log(res);
         const { temperature, summary } = res.currently;
-        console.log(temperature, summary);
         articleApp.displayWeather(res);
     })
 }
@@ -80,14 +78,12 @@ articleApp.userInput = () => {
 
 articleApp.formatDate = (date) => {
     const parsedDate = new Date(date);
-    console.log(parsedDate);
     return finalDate = parsedDate.toLocaleDateString(); 
 }
 
 // Display results (Header / Description / Photo)
 articleApp.displayArticle = (response) => {
     let articleInfo = response.response.docs;
-    // console.log(articleInfo)
     articleInfo.forEach((article)=>{
 
         
